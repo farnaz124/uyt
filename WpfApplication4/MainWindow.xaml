@@ -1,0 +1,31 @@
+﻿<Window x:Class="WpfApplication4.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication4"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" WindowStartupLocation="CenterScreen" AllowsTransparency="True" WindowStyle="None">
+    <Grid>
+        <Menu Background="Yellow" Height="40" Width="525" Margin="0,0,0,310">
+            <MenuItem Name="File" Header="File" FontSize="22">
+                <MenuItem Name="New" Header="New" Click="New_Click"/>
+                <MenuItem Name="Open" Header="Open" Click="Open_Click"/>
+                <MenuItem Name="Save" Header="Save" Click="Save_Click"/>
+                <Separator/>
+                <MenuItem Name="Exit" Header="Exit" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Name="Edit" Header="Edit" FontSize="22">
+                <MenuItem Name="BackColor" Header="BackColor" Click="BackColor_Click">
+                    <MenuItem Name="Red" Header="Red" Click="Red_Click" Background="Red"/>
+                    <MenuItem Name="Yellow" Header="Yellow" Click="Yellow_Click" Background="Yellow"/>
+                </MenuItem>
+                <MenuItem Name="ForeColor" Header="ForeColor" Click="ForeColor_Click">
+                    <MenuItem Name="RedF" Header="Red" Click="RedF_Click" Background="Red"/>
+                    <MenuItem Name="YellowF" Header="Yellow" Click="YellowF_Click" Background="Yellow"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="textBox1" HorizontalAlignment="Left" Height="310" Margin="0,40,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="525"/>
+    </Grid>
+</Window>
